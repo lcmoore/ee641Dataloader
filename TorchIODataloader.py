@@ -1,4 +1,4 @@
-from ast import Tuple
+
 import torch
 import torchio as tio
 import os
@@ -68,7 +68,7 @@ def get_subject_list(dataset_dir):
             patient_list.append(subject)
     return patient_list
 
-def get_loader(target_directory:str =None, train_bs=1, val_bs=1, num_works=10) -> Tuple[data.DataLoader,data.DataLoader,data.DataLoader]: 
+def get_loader(target_directory:str =None, train_bs=1, val_bs=1, num_works=10): 
     '''
     Parameters
     target_directory: absolute path to location of either Infection Segmentation Dataset or Lung Segmentation Dataset
